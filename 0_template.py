@@ -8,3 +8,4 @@
 # 2. Process
 
 # 3. Output
+print('Hello Tunghai University!')
