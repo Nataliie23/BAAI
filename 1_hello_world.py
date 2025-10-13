@@ -10,3 +10,4 @@
 # 3. Output
 print('Hello THU!')
 
+print ("Hello, World")
