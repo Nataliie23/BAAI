@@ -1,2 +1,12 @@
-if 5 > 2:
-    print ("Five is greater than 2")
+def countries(country):
+    print("I am from", country)
+
+countries("Spain")
+countries("Ukraine")
+
+def Miamor(name):
+    print("I love you,", name)
+
+Miamor("María")
+
+
