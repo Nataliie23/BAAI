@@ -5,13 +5,19 @@
 #
 
 # 1. Input
-account_balance = 5000
-withdrawal = 6000
+#Grading system:
+score: 85
 # 2. Process
-if withdrawal <= account_balance:
-    account_balance -= withdrawal
-    print("withdrawal sucessful. New balance: $¨{account_balance}")
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
 else:
-    print("Insufficient funds!")
+    grade = "F"
+
 # 3. Output
- 
+ print(f"score: {score}, grade: {grade}")
