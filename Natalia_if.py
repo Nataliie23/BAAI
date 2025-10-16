@@ -6,7 +6,7 @@
 
 # 1. Input
 #Grading system:
-score: 85
+score = 85
 # 2. Process
 if score >= 90:
     grade = "A"
@@ -20,4 +20,4 @@ else:
     grade = "F"
 
 # 3. Output
- print(f"score: {score}, grade: {grade}")
+print(f"score: {score}, grade: {grade}")
