@@ -1,8 +1,7 @@
 #This is a program for a retail store
 #We are making a Product Discount Calculator
 
-print("=== PRODUCT DISCOUNT CALCULATOR ===")
-print("   ")
+
 #Data provided:
 products = [{"name": "Laptop", "price" : 1200, "category": "Electronics"},
             {"name": "Shirt", "price": 45, "category": "Clothing"},
@@ -13,33 +12,45 @@ products = [{"name": "Laptop", "price" : 1200, "category": "Electronics"},
             {"name": "Book", "price": 25, "category": "Books"},
             {"name": "Headphones", "price": 150, "category": "Electronics"}]
 
-
+print("=== PRODUCT DISCOUNT CALCULATOR ===")
+print("   ")
 total_original = 0
 total_discount = 0
 total_final = 0 
 
 for product in products:
     price = product["price"] 
+    category = product["category"]
 
-#Discounts percentage
-    if price >= 1000:
-        discounts = "20%"
-    elif price >= 500:
-        discounts = "15%"
-    else:
+    if category == "Electronics":
+        if price >= 1000:
+            discounts = "20%"
+            discount = price * 0.20
+        elif price >= 500:
+            discounts = "15%"
+            discount = price * 0.15
+        else:
+            discounts = "10%"
+            discount = price * 0.10
+
+    elif category == "Clothing":
+        if price >= 100:
+            discounts = "25%"
+            discount = price * 0.25
+        else:
+            discounts = "15%"
+            discount = price * 0.15
+
+    elif category == "Books":
         discounts = "10%"
+        discount = price * 0.10 
 
-
-#Discounts
-    if price >= 1000:
-        discount = price * 0.2
-    elif price >= 500:
-        discount = price * 0.15
     else:
-        discount = price * 0.1
+        discount = 0.0  
+        discounts = "0%"
 
-    final_price = price - discount #ChatGPT helped me realized I am missing this last part of the code, 
-                                #but the rest  of "discount" I did by myself.
+    final_price = price - discount 
+    
     total_original += price
     total_discount += discount
     total_final += final_price
@@ -58,5 +69,5 @@ print (f"Total products: {total_products}")
 
 
 print(f"Total Original Price: ${total_original}")
-print(f"Total Dicount: ${total_discount}")
+print(f"Total Discount: ${total_discount}")
 print(f"Final price: {total_final}")
