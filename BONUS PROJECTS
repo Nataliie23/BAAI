@@ -1,11 +1,8 @@
 # PROJECT 1: SALES PERFORMANCE ANALYZER
  
- 
 import pandas as pd
 
 df = pd.read_excel('sales_data.xlsx')
-
-
 
 sales_data = [{"name": "John Smith", "monthly_sales": 45000, "sales_target": 40000},
          {"name": "Sarah Lee", "monthly_sales": 38000, "sales_target": 40000},
@@ -13,16 +10,25 @@ sales_data = [{"name": "John Smith", "monthly_sales": 45000, "sales_target": 400
          {"name": "Anna Wong", "monthly_sales": 41000, "sales_target": 40000}]
 
 
+print("SALES PERFORMANCE REPORT")
+print("========================")
+
+total_bonuses = 0
 for record in sales_data:
     monthly_sales = record["monthly_sales"]
     sales_target = record["sales_target"]
 
     if monthly_sales > sales_target:
         Bonus = monthly_sales * 0.10
-        Target = "TARGET MET"
+   
+        print(f"{record['name']}: 'TARGET MET' | Sales: ${record['monthly_sales']:,.0f} | Bonus: ${Bonus:,.0f}")
     
     else:
         Bonus = monthly_sales * 0.05
-        Target = "TARGET NOT MET"
+        print(f"{record['name']} 'TARGET NOT MET'| Sales: ${record['monthly_sales']:,.0f} | Bonus: ${Bonus:,.0f}")
 
-    print (f"{record['name']}: {Target} | Sales: ${record['monthly_sales']} | Bonus: ${Bonus}")
+
+    total_bonuses += Bonus
+
+print("       ")
+print(f"Total bonuses to Pay: ${total_bonuses:,.0f}")
