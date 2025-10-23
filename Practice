@@ -1,28 +1,5 @@
-# PROJECT 1: SALES PERFORMANCE ANALYZER
- 
- 
+#Project 2
+
 import pandas as pd
 
-df = pd.read_excel('sales_data.xlsx')
-
-
-
-sales_data = [{"name": "John Smith", "monthly_sales": 45000, "sales_target": 40000},
-         {"name": "Sarah Lee", "monthly_sales": 38000, "sales_target": 40000},
-         {"name": "Mike Chen", "monthly_sales": 52000, "sales_target": 40000},
-         {"name": "Anna Wong", "monthly_sales": 41000, "sales_target": 40000}]
-
-
-for record in sales_data:
-    monthly_sales = record["monthly_sales"]
-    sales_target = record["sales_target"]
-
-    if monthly_sales > sales_target:
-        Bonus = monthly_sales * 0.10
-        Target = "TARGET MET"
-    
-    else:
-        Bonus = monthly_sales * 0.05
-        Target = "TARGET NOT MET"
-
-    print (f"{record['name']}: {Target} | Sales: ${record['monthly_sales']} | Bonus: ${Bonus}")
+df

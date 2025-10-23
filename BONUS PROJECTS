@@ -1,34 +1,26 @@
 # PROJECT 1: SALES PERFORMANCE ANALYZER
  
+ 
 import pandas as pd
 
 df = pd.read_excel('sales_data.xlsx')
 
-sales_data = [{"name": "John Smith", "monthly_sales": 45000, "sales_target": 40000},
-         {"name": "Sarah Lee", "monthly_sales": 38000, "sales_target": 40000},
-         {"name": "Mike Chen", "monthly_sales": 52000, "sales_target": 40000},
-         {"name": "Anna Wong", "monthly_sales": 41000, "sales_target": 40000}]
-
-
-print("SALES PERFORMANCE REPORT")
-print("========================")
-
 total_bonuses = 0
-for record in sales_data:
-    monthly_sales = record["monthly_sales"]
-    sales_target = record["sales_target"]
+for index, row in df.iterrows(): #This colum related to how to read excel I had to ask ChatGPT for help,
+    name = row["Employee Name"]  #I only knew how to do it with data written here manually like in the last Miniproject
+    monthly_sales = row["Monthly Sales"]
+    sales_target = row["Sales Target"]
+
 
     if monthly_sales > sales_target:
         Bonus = monthly_sales * 0.10
-   
-        print(f"{record['name']}: 'TARGET MET' | Sales: ${record['monthly_sales']:,.0f} | Bonus: ${Bonus:,.0f}")
+        Target = "TARGET MET"
     
     else:
         Bonus = monthly_sales * 0.05
-        print(f"{record['name']} 'TARGET NOT MET'| Sales: ${record['monthly_sales']:,.0f} | Bonus: ${Bonus:,.0f}")
+        Target = "TARGET NOT MET"
 
-
+    print (f"{name}: {Target} | Sales: ${monthly_sales:,.0f} | Bonus: ${Bonus:,.0f}")
     total_bonuses += Bonus
-
-print("       ")
-print(f"Total bonuses to Pay: ${total_bonuses:,.0f}")
+print("    ")
+print(f"Total Bonuses: ${total_bonuses:,.2f}")
