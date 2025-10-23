@@ -5,6 +5,9 @@ import pandas as pd
 
 df = pd.read_excel('sales_data.xlsx')
 
+print('SALES PERFORMANCE REPORT')
+print('========================')
+
 total_bonuses = 0
 for index, row in df.iterrows(): #This colum related to how to read excel I had to ask ChatGPT for help,
     name = row["Employee Name"]  #I only knew how to do it with data written here manually like in the last Miniproject
@@ -24,3 +27,35 @@ for index, row in df.iterrows(): #This colum related to how to read excel I had 
     total_bonuses += Bonus
 print("    ")
 print(f"Total Bonuses: ${total_bonuses:,.2f}")
+
+#Project 2
+
+import pandas as pd
+import os
+
+df = pd.read_excel('inventory.xlsx')
+
+print("INVENTORY REORDER REPORT")
+print("========================")
+print("Products Needind Reorder:")
+print("           ")
+
+total_reorder_cost = 0
+for index, row in df.iterrows(): 
+    name = row["Product_Name"]  
+    current_stock = row["Current_Stock"]
+    minimum_stock = row["Minimum_Stock"]
+    unit_price = row["Unit_Price"]
+
+    reorder_units = minimum_stock - current_stock + 10
+    reorder_cost =  unit_price * reorder_units  
+
+    if current_stock < minimum_stock:
+        total_reorder_cost += reorder_cost
+        print(f"{name}: Reorder {reorder_units} units | Cost: ${reorder_cost:,.0f} ")
+    else:
+      print(f"Products in Good Stock: {name}")
+   
+print("    ")
+print(f"Total Reorder Cost: ${total_reorder_cost:,.0f}")
+

@@ -1,0 +1,45 @@
+>>> INICIO DIAGNÓSTICO
+Python ejecutable: C:\Users\natal\AppData\Local\Programs\Python\Python314\python.exe
+Python version: 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+Working dir (cwd): C:\Users\natal\OneDrive\Escritorio\Python\New folder\BAAI
+Archivos en la carpeta:
+  - .git
+  - .gitignore
+  - 0_template.py
+  - 1_hello_world.py
+  - 2_hello_name.py
+  - 3_hello_name_input.py
+  - 4_add_two_numbers.py
+  - BONUS PROJECTS
+  - column_sums.xlsx
+  - column_sums_with_total_row.xlsx
+  - Correlataion_Analysis_Data.csv
+  - Data_analysis.html
+  - Data_wrangling.html
+  - Data_wrangling_files
+  - Financial_Sample.xlsx
+  - Financial_Sample_with_total_row.xlsx
+  - Financial_Sample_with_total_row_with_total_row.xlsx
+  - inventory.xlsx
+  - Mini_project.py
+  - Natalia_Correlation_Analysis.py
+  - Natalia_Excel.py
+  - Natalia_if.py
+  - Natalia_loop.py
+  - Natalia_minus.py
+  - Natalia_Sum.py
+  - Practice.py
+  - README.md
+  - sales_data.xlsx
+  - Simple_Data.csv
+  - Viz.html
+Archivos que contienen 'inventory' en el nombre: ['inventory.xlsx', 'inventory.xlsx']
+
+Intentando leer 'inventory.xlsx' con engine openpyxl...
+Éxito: Excel leído. Columnas encontradas: ['Product_Name', 'Current_Stock', 'Minimum_Stock', 'Unit_Price']
+Primeras filas:
+  Product_Name  Current_Stock  Minimum_Stock  Unit_Price
+0       Laptop             15             20         800
+1        Mouse             45             30          25
+2     Keyboard             18             25          60
+3      Monitor              8             15         300
