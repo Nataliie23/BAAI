@@ -37,7 +37,7 @@ df = pd.read_excel('inventory.xlsx')
 
 print("INVENTORY REORDER REPORT")
 print("========================")
-print("Products Needind Reorder:")
+print("Products Needing Reorder:")
 print("           ")
 
 total_reorder_cost = 0
